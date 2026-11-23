@@ -7,9 +7,10 @@ on:
         type: choice
         description: 'Cleanup workflow name'
         required: true
-        default: 'Build RedPanda GKI Kernel'
+        default: 'Build GKI Kernel'
         options:
           - Build GKI Kernel
+          - Regenerate Defconfig
       cache_mode:
         type: choice
         description: 'Cache Cleanup Type'
