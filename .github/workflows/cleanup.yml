@@ -9,8 +9,7 @@ on:
         required: true
         default: 'Build RedPanda GKI Kernel'
         options:
-          - Build RedPanda GKI Kernel
-          - Build Testing Kernel
+          - Build GKI Kernel
       cache_mode:
         type: choice
         description: 'Cache Cleanup Type'
