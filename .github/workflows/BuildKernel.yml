@@ -300,9 +300,20 @@ jobs:
           }
           
           set_config CONFIG_KSU y
-          set_config CONFIG_KSU_SUSFS y
           set_config CONFIG_KALLSYMS y
           set_config CONFIG_KALLSYMS_ALL y
+
+          set_config CONFIG_KSU_SUSFS y
+          set_config CONFIG_KSU_SUSFS_SUS_PATH y
+          set_config CONFIG_KSU_SUSFS_SUS_MOUNT y
+          set_config CONFIG_KSU_SUSFS_SUS_KSTAT y
+          set_config CONFIG_KSU_SUSFS_SPOOF_UNAME y
+          set_config CONFIG_KSU_SUSFS_ENABLE_LOG y
+          set_config CONFIG_KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS y
+          set_config CONFIG_KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG y
+          set_config CONFIG_KSU_SUSFS_OPEN_REDIRECT y
+          set_config CONFIG_KSU_SUSFS_SUS_MAP y
+          set_config CONFIG_KSU_SUSFS_PRIORITY_UID_FILTER
           
           if [ "${{ github.event.inputs.build_variant }}" = "FinaSU" ]; then
             set_config CONFIG_KSU_HOOK_SUSFS_INLINE y
