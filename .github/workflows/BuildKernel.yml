@@ -248,7 +248,7 @@ jobs:
           fi
           
       - name: Enable Smartutil Sched
-        if: github.event.inputs.schednew
+        if: inputs.schednew
         working-directory: kernel_workspace
         run: |
           patch -p1 < $GITHUB_WORKSPACE/patches/smartutil-schedhorizon-0.3.0-6.6.144.patch
